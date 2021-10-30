@@ -5,9 +5,77 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <title>Contact Form</title>
     <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/integration
+            emailjs.init('user_FCUkpASdc9CBTi1BLjsiH');
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                // generate a five digit number for the contact_number variable
+                this.contact_number.value = Math.random() * 100000 | 0;
+                // these IDs from the previous steps
+                emailjs.sendForm('service_95q4ov9', 'template_yr2hoki', this)
+                    .then(function() {
+                        console.log('SUCCESS!');
+                    }, function(error) {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+    </script>
 </head>
 <body>
-    <h1>Text</h1>
+    <div class="box">
+    <form action="" id="contact-form"> 
+        <input type="hidden" name="contact_number"></form>
+   <form action=""></form> 
+   <p>
+       <label for="">Имя</label>
+       <input type="text" name="name-user"> 
+   </p>
+   <p>
+       <label for="">Почта</label>
+       <input type="email" name="email-user">
+   </p>
+   <p>
+       <label for="">Телефон</label>
+       <input type="tel" name="tel-user">
+   </p>
+   <p>
+       <fieldset>
+           <legend>Gender</legend>
+           <p><input type="radio" name="gender">Мужчина</p>
+           <p><input type="radio" name="gender">Женщина</p>
+           <p><input type="radio" name="gender">Не определился</p>
+       </fieldset>
+   </p>
+   <p>Район проживания</p>
+   <select name="district" id="">
+       <option value="">Покровский</option>
+       <option value="">Терновской</option>
+       <option value="">Центрально-городской</option>
+       <option value="">Саксаганский</option>
+   </select> <br>
+   <fieldset>
+       <legend>Любимый напиток</legend>
+       <p><input type="checkbox" name="tea">Чай</p>
+       <p><input type="checkbox" name="coffee">Кофе</p>
+       <p><input type="checkbox" name="kvas">Квас</p>
+       <p><input type="checkbox" name="juise">Сок</p>
+       <p><input type="checkbox" name="watter">Вода</p>
+   </fieldset>
+   <p>
+       <label for="">Ваши впечетления от курса</label>
+       <textarea name="opinion" id="" cols="100%" rows="10"></textarea>
+   </p>
+   <button type="submit" value="send">Отправить</button>
+   <button type="reset">Очистить</button></div>
 </body>
 </html>
