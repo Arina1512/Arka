@@ -1,35 +1,99 @@
-.box{
-    background: url(../img2.jpg);
-    height: 100vh;
-    background-repeat: no-repeat;
-    background-size: cover;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-p{
-    color: rgb(0, 0, 0);
+.header{
+    background-color: rgb(255, 175, 27);
 }
-legend{
-    color: rgb(94, 126, 91);
+ul{
+    list-style-type: none;
 }
-button{
-    color: rgb(0, 0, 0);
-    background-color: rgb(221, 162, 0);
+.conteiner{
+  
+    margin: 0 auto;
+ 
 }
-button:hover{
-    color: honeydew;
-    background-color: rgb(255, 222, 132);
+a{
+    color: darkgreen;
+    
 }
-input{
-    background-color:  rgb(179, 255, 149);
+a:hover{
+    color: greenyellow;
 }
-textarea{
-    background-color:  rgb(179, 255, 149);
+body{
+    background: url(../img2.jpg) no-repeat;
+ background-size: cover;
+    
 }
-input:hover{
-    background-color: rgb(252, 255, 102);
+.card-item{
+    border: 2px solid black;
+    margin: 10px;
+    background-color: rgb(153, 255, 0);
+    color: rgb(255, 255, 255);
 }
-textarea:hover{
-    background-color: rgb(221, 157, 18);
+.card-item:hover{
+    background-color: rgb(255, 175, 27) ;
 }
-option{
-background-color: rgb(255, 123, 0);
+h2{
+    margin: 5px;
 }
+.header-nav li{
+    display: inline-block;
+    margin-left: 10px;
+
+}
+
+
+.nav-item{
+    text-decoration: none;
+    font-size: 14px;
+}
+.header-inner{
+    display: flex;
+    justify-content: space-between;
+}
+.main-inner{
+    display: flex;
+    justify-content: space-between;
+}
+section{
+    width: 80%;
+}
+.main-card{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.card-item{
+    width: 45%;
+    }
+    @media screen and (min-width:1024px) {
+      .conteiner{
+        width: 80%;
+      }  
+    }
+    @media screen and (min-width:768px) and (max-width:1024px){
+        .conteiner{
+            width: 90%;
+        }
+        .main-inner{
+            flex-direction: column;
+        }
+        input{
+            display: none;
+
+        }
+    }
+    @media  screen and( max-width:480px) {
+       
+        .main-inner{
+            flex-direction: column;
+        }
+        input{
+            display: none;
+
+        }
+
+    
+    }
