@@ -1,99 +1,10 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-.header{
-    background-color: rgb(255, 175, 27);
-}
-ul{
-    list-style-type: none;
-}
-.conteiner{
-  
-    margin: 0 auto;
- 
-}
-a{
-    color: darkgreen;
-    
-}
-a:hover{
-    color: greenyellow;
-}
-body{
-    background: url(../img2.jpg) no-repeat;
- background-size: cover;
-    
-}
-.card-item{
+.uk-border-circle{
     border: 2px solid black;
-    margin: 10px;
-    background-color: rgb(153, 255, 0);
-    color: rgb(255, 255, 255);
+    transition: 0.25s linear;
 }
-.card-item:hover{
-    background-color: rgb(255, 175, 27) ;
+.two{
+    margin-left: -20px;
 }
-h2{
-    margin: 5px;
+.uk-border-circle:hover{
+transform: scale(1.25);
 }
-.header-nav li{
-    display: inline-block;
-    margin-left: 10px;
-
-}
-
-
-.nav-item{
-    text-decoration: none;
-    font-size: 14px;
-}
-.header-inner{
-    display: flex;
-    justify-content: space-between;
-}
-.main-inner{
-    display: flex;
-    justify-content: space-between;
-}
-section{
-    width: 80%;
-}
-.main-card{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-.card-item{
-    width: 45%;
-    }
-    @media screen and (min-width:1024px) {
-      .conteiner{
-        width: 80%;
-      }  
-    }
-    @media screen and (min-width:768px) and (max-width:1024px){
-        .conteiner{
-            width: 90%;
-        }
-        .main-inner{
-            flex-direction: column;
-        }
-        input{
-            display: none;
-
-        }
-    }
-    @media  screen and( max-width:480px) {
-       
-        .main-inner{
-            flex-direction: column;
-        }
-        input{
-            display: none;
-
-        }
-
-    
-    }
