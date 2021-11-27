@@ -1,0 +1,10 @@
+.uk-border-circle{
+    border: 2px solid black;
+    transition: 0.25s linear;
+}
+.two{
+    margin-left: -20px;
+}
+.uk-border-circle:hover{
+transform: scale(1.25);
+}
